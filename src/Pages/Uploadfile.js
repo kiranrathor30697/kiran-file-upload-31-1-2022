@@ -25,18 +25,17 @@ export default function UploadFile() {
 
         let response = await axios({
             method: 'POST',
-            url:'http://localhost:1337/api/upload',
+            //url:'http://localhost:1337/api/uplload',
+            url:'https://safe-wildwood-83604.herokuapp.com/api/upload',
             data
         })
-        console.log(response.request.status);
+        console.log(response);
         if(response.request.status){
             if(response.request.status === 200){
             console.log('hello');
-            swal("Good job!", "You clicked the button!", "success");
+            swal("Done!", "File upload Successfully!", "success");
             }
-        }
-        
-        
+        }   
     }
 
     //3.return statement
